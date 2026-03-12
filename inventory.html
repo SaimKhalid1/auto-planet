@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory | Auto Planet</title>
+  <meta name="description" content="Browse Auto Planet's current inventory of luxury and performance vehicles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Auto Planet home">
+      <span class="brand-mark">AP</span>
+      <span class="brand-copy">
+        <span class="brand-title">AUTO PLANET</span>
+        <span class="brand-subtitle">Luxury & Performance Vehicles</span>
+      </span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="inventory.html" class="active">Inventory</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="admin/login.html" class="nav-cta">Admin</a>
+    </nav>
+
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="admin/login.html">Admin</a>
+  </nav>
+
+  <main class="page-shell">
+    <section class="inventory-hero glass">
+      <span class="eyebrow">CURRENT INVENTORY</span>
+      <h1>Luxury, performance, and clean daily drivers.</h1>
+      <p>Browse available vehicles and open any listing for full details.</p>
+    </section>
+
+    <section class="filters glass">
+      <div class="field">
+        <label for="search">Search</label>
+        <input id="search" type="text" placeholder="BMW, Mercedes, Audi..." />
+      </div>
+      <div class="field">
+        <label for="max-price">Max Price</label>
+        <input id="max-price" type="number" placeholder="50000" />
+      </div>
+      <div class="field">
+        <label for="max-mileage">Max Mileage</label>
+        <input id="max-mileage" type="number" placeholder="120000" />
+      </div>
+      <div class="field">
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="newest">Newest</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+          <option value="yearHigh">Year: Newest First</option>
+          <option value="mileageLow">Mileage: Low to High</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <div class="inventory-count" id="inventory-count">Loading inventory...</div>
+      <div class="car-grid" id="inventory-grid"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/inventory.js"></script>
+</body>
+</html>

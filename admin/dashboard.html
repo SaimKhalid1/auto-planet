@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Auto Planet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="admin-body">
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+
+  <header class="admin-header">
+    <a class="brand" href="../index.html" aria-label="Auto Planet home">
+      <span class="brand-mark">AP</span>
+      <span class="brand-copy">
+        <span class="brand-title">AUTO PLANET</span>
+        <span class="brand-subtitle">Admin Dashboard</span>
+      </span>
+    </a>
+
+    <div class="admin-actions">
+      <a href="../inventory.html" class="btn btn-secondary">View Site</a>
+      <button id="logout-btn" class="btn btn-outline" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="dashboard-shell">
+    <section class="glass dashboard-panel">
+      <div class="section-heading left">
+        <span class="eyebrow">NEW LISTING</span>
+        <h1>Post a vehicle</h1>
+      </div>
+
+      <form id="listing-form" class="admin-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="year">Year</label>
+            <input id="year" type="number" placeholder="2021" required />
+          </div>
+          <div class="field">
+            <label for="make">Make</label>
+            <input id="make" type="text" placeholder="BMW" required />
+          </div>
+          <div class="field">
+            <label for="model">Model</label>
+            <input id="model" type="text" placeholder="M340i" required />
+          </div>
+          <div class="field">
+            <label for="trim">Trim</label>
+            <input id="trim" type="text" placeholder="xDrive" />
+          </div>
+          <div class="field">
+            <label for="price">Price</label>
+            <input id="price" type="number" placeholder="38900" required />
+          </div>
+          <div class="field">
+            <label for="mileage">Mileage (km)</label>
+            <input id="mileage" type="number" placeholder="72000" required />
+          </div>
+          <div class="field">
+            <label for="transmission">Transmission</label>
+            <input id="transmission" type="text" placeholder="Automatic" />
+          </div>
+          <div class="field">
+            <label for="fuelType">Fuel Type</label>
+            <input id="fuelType" type="text" placeholder="Gasoline" />
+          </div>
+          <div class="field">
+            <label for="drivetrain">Drivetrain</label>
+            <input id="drivetrain" type="text" placeholder="AWD" />
+          </div>
+          <div class="field">
+            <label for="condition">Condition</label>
+            <input id="condition" type="text" placeholder="Excellent" />
+          </div>
+          <div class="field">
+            <label for="exteriorColor">Exterior Color</label>
+            <input id="exteriorColor" type="text" placeholder="Black Sapphire Metallic" />
+          </div>
+          <div class="field">
+            <label for="interiorColor">Interior Color</label>
+            <input id="interiorColor" type="text" placeholder="Black" />
+          </div>
+          <div class="field">
+            <label for="vin">VIN</label>
+            <input id="vin" type="text" placeholder="Optional" />
+          </div>
+          <div class="field">
+            <label for="stockNumber">Stock Number</label>
+            <input id="stockNumber" type="text" placeholder="AP-1001" />
+          </div>
+          <div class="field field-checkbox">
+            <label><input id="featured" type="checkbox" /> Featured Listing</label>
+          </div>
+          <div class="field field-checkbox">
+            <label><input id="sold" type="checkbox" /> Mark as Sold</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="description">Description</label>
+          <textarea id="description" rows="6" placeholder="Clean local vehicle, strong service history, loaded spec..." required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="images">Upload Photos</label>
+          <input id="images" type="file" accept="image/*" multiple />
+          <small class="helper-text">You can upload multiple images. They will be compressed automatically in the browser.</small>
+        </div>
+
+        <div id="image-preview" class="preview-grid"></div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Publish Listing</button>
+          <div id="form-status" class="status-text"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="glass dashboard-panel">
+      <div class="section-heading left">
+        <span class="eyebrow">CURRENT LISTINGS</span>
+        <h2>Manage inventory</h2>
+      </div>
+      <div id="admin-listings" class="admin-listings"></div>
+    </section>
+  </main>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | Auto Planet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="admin-body">
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+
+  <main class="auth-shell">
+    <div class="auth-card glass">
+      <a href="../index.html" class="brand auth-brand">
+        <span class="brand-mark">AP</span>
+        <span class="brand-copy">
+          <span class="brand-title">AUTO PLANET</span>
+          <span class="brand-subtitle">Admin Access</span>
+        </span>
+      </a>
+
+      <span class="eyebrow">SECURE LOGIN</span>
+      <h1>Sign in to manage listings</h1>
+      <p>Only the admin password can publish or delete inventory.</p>
+
+      <form id="login-form" class="admin-form tight">
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter admin password" required />
+        </div>
+        <button class="btn btn-primary wide" type="submit">Login</button>
+        <div id="login-status" class="status-text"></div>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/admin-login.js"></script>
+</body>
+</html>

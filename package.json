@@ -1,0 +1,9 @@
+{
+  "name": "auto-planet-netlify-luxury",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Auto Planet luxury dealership website with Netlify Functions backend",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
